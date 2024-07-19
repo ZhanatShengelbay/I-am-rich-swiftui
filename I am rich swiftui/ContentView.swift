@@ -9,16 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
+        ZStack{
+            Color.mint
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                    .foregroundColor(.blue)
+                Image("diamond").resizable().aspectRatio(contentMode:.fit)
+            }
+            .padding()
+        }}
 }
 
 #Preview {
-    ContentView()
+    ContentView().previewDevice("iPhone SE")
 }
